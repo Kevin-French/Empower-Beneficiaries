@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum State: String, Decodable {
+  case colorado = "CO" // ...
+}

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum Country: String, Decodable {
+  case unitedStates = "US" // ...
+}
