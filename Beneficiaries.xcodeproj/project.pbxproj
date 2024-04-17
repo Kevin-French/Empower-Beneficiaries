@@ -13,6 +13,7 @@
 		0A404A022BD083C600B973AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A404A012BD083C600B973AA /* Assets.xcassets */; };
 		0A404A052BD083C600B973AA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0A404A042BD083C600B973AA /* Base */; };
 		0A404A102BD083C600B973AA /* BeneficiariesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A404A0F2BD083C600B973AA /* BeneficiariesTests.swift */; };
+		0A404A292BD0861600B973AA /* Beneficiaries.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A404A282BD0861600B973AA /* Beneficiaries.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		0A404A062BD083C600B973AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A404A0B2BD083C600B973AA /* BeneficiariesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeneficiariesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A404A0F2BD083C600B973AA /* BeneficiariesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiariesTests.swift; sourceTree = "<group>"; };
+		0A404A282BD0861600B973AA /* Beneficiaries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Beneficiaries.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				0A4049F82BD083C400B973AA /* AppDelegate.swift */,
 				0A4049FA2BD083C400B973AA /* SceneDelegate.swift */,
+				0A404A282BD0861600B973AA /* Beneficiaries.json */,
 				0A4049FC2BD083C400B973AA /* ViewController.swift */,
 				0A404A012BD083C600B973AA /* Assets.xcassets */,
 				0A404A032BD083C600B973AA /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 			files = (
 				0A404A022BD083C600B973AA /* Assets.xcassets in Resources */,
 				0A404A052BD083C600B973AA /* Base in Resources */,
+				0A404A292BD0861600B973AA /* Beneficiaries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
