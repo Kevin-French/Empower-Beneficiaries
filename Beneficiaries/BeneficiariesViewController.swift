@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  BeneficiariesViewController.swift
 //  Beneficiaries
 //
-//  Created by Kevin French on 4/17/24.
+//  Created by Kevin French on 4/18/24.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class BeneficiariesViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -15,4 +15,3 @@ class ViewController: UIViewController {
     title = "Beneficiaries"
   }
 }
-
