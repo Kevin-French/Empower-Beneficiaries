@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let beneficiariesViewController = Factory.makeBeneficiariesViewController(
       beneficiarySelected: flow!.beneficiarySelected(_:))
     
-    flow?.begin(viewController: beneficiariesViewController)
+    flow?.begin(byPresenting: beneficiariesViewController)
     
     self.window = UIWindow(windowScene: windowScene)
     self.window?.rootViewController = flow?.navigationController

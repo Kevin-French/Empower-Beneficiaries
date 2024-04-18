@@ -16,7 +16,7 @@ class Flow {
     self.navigationController = navigationController
   }
   
-  func begin(viewController: UIViewController) {
+  func begin(byPresenting viewController: UIViewController) {
     navigationController.pushViewController(viewController, animated: false)
   }
   

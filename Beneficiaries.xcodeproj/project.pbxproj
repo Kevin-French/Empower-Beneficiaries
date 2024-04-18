@@ -108,23 +108,15 @@
 			children = (
 				0A4049F82BD083C400B973AA /* AppDelegate.swift */,
 				0A4049FA2BD083C400B973AA /* SceneDelegate.swift */,
+				0A4CA3222BD16767006AE902 /* Flow.swift */,
+				0A4CA31C2BD156A9006AE902 /* Factory.swift */,
+				0A404A2E2BD0870F00B973AA /* BeneficiariesLoader.swift */,
 				0A404A282BD0861600B973AA /* Beneficiaries.json */,
 				0A404A012BD083C600B973AA /* Assets.xcassets */,
 				0A404A032BD083C600B973AA /* LaunchScreen.storyboard */,
 				0A404A062BD083C600B973AA /* Info.plist */,
-				0A404A2E2BD0870F00B973AA /* BeneficiariesLoader.swift */,
-				0A404A302BD0873600B973AA /* Beneficiary.swift */,
-				0A404A322BD087A800B973AA /* Address.swift */,
-				0A404A342BD087BC00B973AA /* Country.swift */,
-				0A404A382BD0882000B973AA /* State.swift */,
-				0A4CA3122BD147A5006AE902 /* BeneficiariesViewController.swift */,
-				0A4CA3182BD15093006AE902 /* BeneficiariesViewModel.swift */,
-				0A4CA31A2BD1533B006AE902 /* BeneficiaryCell.swift */,
-				0A4CA31C2BD156A9006AE902 /* Factory.swift */,
-				0A4CA3222BD16767006AE902 /* Flow.swift */,
-				0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */,
-				0A4CA32A2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift */,
-				0A4CA32C2BD1904E006AE902 /* BeneficiaryDetailInfoItemCell.swift */,
+				0A6973BF2BD1BB29009236D9 /* Views */,
+				0A6973BE2BD1BB1D009236D9 /* Models */,
 			);
 			path = Beneficiaries;
 			sourceTree = "<group>";
@@ -137,6 +129,46 @@
 				0A4CA3142BD14928006AE902 /* BeneficiariesViewController.swift */,
 			);
 			path = BeneficiariesTests;
+			sourceTree = "<group>";
+		};
+		0A6973BE2BD1BB1D009236D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A4CA32A2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift */,
+				0A4CA3182BD15093006AE902 /* BeneficiariesViewModel.swift */,
+				0A404A302BD0873600B973AA /* Beneficiary.swift */,
+				0A404A322BD087A800B973AA /* Address.swift */,
+				0A404A342BD087BC00B973AA /* Country.swift */,
+				0A404A382BD0882000B973AA /* State.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A6973BF2BD1BB29009236D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A6973C12BD1BB37009236D9 /* Cells */,
+				0A6973C02BD1BB30009236D9 /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A6973C02BD1BB30009236D9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */,
+				0A4CA3122BD147A5006AE902 /* BeneficiariesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A6973C12BD1BB37009236D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A4CA31A2BD1533B006AE902 /* BeneficiaryCell.swift */,
+				0A4CA32C2BD1904E006AE902 /* BeneficiaryDetailInfoItemCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
