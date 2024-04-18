@@ -8,20 +8,14 @@
 import Foundation
 import UIKit
 
-struct BeneficiaryDetailInfoItem: Hashable {
-  let title: String
-  let detail: String
-  let isMultipleLines: Bool
-}
+typealias BeneficiaryDetailDataSource = UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailViewModel.InfoItem>
 
 class BeneficiaryDetailViewModel {
   
   let beneficiary: Beneficiary
-  private let dataSource: UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem>
+  private let dataSource: BeneficiaryDetailDataSource
   
-  init(
-    beneficiary: Beneficiary,
-    dataSource: UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem>) {
+  init(beneficiary: Beneficiary, dataSource: BeneficiaryDetailDataSource) {
       
     self.beneficiary = beneficiary
     self.dataSource = dataSource
@@ -30,7 +24,8 @@ class BeneficiaryDetailViewModel {
   }
   
   private func makeSnapshot() {
-    var snapshot = NSDiffableDataSourceSnapshot<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem>()
+    
+    var snapshot = NSDiffableDataSourceSnapshot<BeneficiaryDetailViewController.Section, InfoItem>()
     
     snapshot.appendSections(BeneficiaryDetailViewController.Section.allCases)
     
@@ -60,12 +55,20 @@ class BeneficiaryDetailViewModel {
         isMultipleLines = true
       }
       
-      let item = BeneficiaryDetailInfoItem(
+      let item = InfoItem(
         title: section.title,
         detail: detail,
         isMultipleLines: isMultipleLines)
       snapshot.appendItems([item], toSection: section)
     }
     dataSource.apply(snapshot)
+  }
+}
+
+extension BeneficiaryDetailViewModel {
+  struct InfoItem: Hashable {
+    let title: String
+    let detail: String
+    let isMultipleLines: Bool
   }
 }

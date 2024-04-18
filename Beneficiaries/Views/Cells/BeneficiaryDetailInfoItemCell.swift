@@ -9,7 +9,7 @@ import UIKit
 
 class BeneficiaryDetailInfoItemCell: UICollectionViewCell {
   
-  var item: BeneficiaryDetailInfoItem? {
+  var item: BeneficiaryDetailViewModel.InfoItem? {
     didSet {
       titleLabel.text = item?.title ?? ""
       detailLabel.text = item?.detail ?? ""

@@ -75,13 +75,13 @@ extension Factory {
       dataSource: makeBeneficiaryDetailViewControllerDataSource(collectionView: collectionView))
   }
   
-  private static func makeBeneficiaryDetailViewControllerDataSource(collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem> {
+  private static func makeBeneficiaryDetailViewControllerDataSource(collectionView: UICollectionView) -> BeneficiaryDetailDataSource {
     
-    let cellRegistration = UICollectionView.CellRegistration<BeneficiaryDetailInfoItemCell, BeneficiaryDetailInfoItem> { cell, indexPath, infoItem in
+    let cellRegistration = UICollectionView.CellRegistration<BeneficiaryDetailInfoItemCell, BeneficiaryDetailViewModel.InfoItem> { cell, indexPath, infoItem in
       cell.item = infoItem
     }
     
-    return UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem>(
+    return BeneficiaryDetailDataSource(
       collectionView: collectionView,
       cellProvider: { collectionView, indexPath, infoItem in
         collectionView.dequeueConfiguredReusableCell(
