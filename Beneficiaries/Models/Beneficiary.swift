@@ -19,7 +19,7 @@ struct Beneficiary: Decodable {
   let phoneNumber: String
   let beneficiaryAddress: Address
   
-  var fullName: String { "\(firstName) \(lastName)"}
+  var fullName: String { "\(firstName) \(lastName)" }
   
   enum CodingKeys: String, CodingKey {
     case lastName
