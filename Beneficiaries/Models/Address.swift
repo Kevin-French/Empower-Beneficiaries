@@ -43,4 +43,13 @@ struct Address: Decodable, Equatable {
     stateCode = try container.decode(State.self, forKey: .stateCode)
     country = try container.decode(Country.self, forKey: .country)
   }
+  
+  init(firstLineMailing: String, secondLineMailing: String? = nil, city: String, zipCode: String, stateCode: State, country: Country) {
+    self.firstLineMailing = firstLineMailing
+    self.secondLineMailing = secondLineMailing
+    self.city = city
+    self.zipCode = zipCode
+    self.stateCode = stateCode
+    self.country = country
+  }
 }
