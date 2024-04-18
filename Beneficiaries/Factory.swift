@@ -17,15 +17,29 @@ extension Factory {
     beneficiarySelected: @escaping (Beneficiary) -> Void) -> BeneficiariesViewController {
       
     let viewController = BeneficiariesViewController()
-    let dataSource = makeBeneficiariesViewControllerDataSource(collectionView: viewController.collectionView)
-    let viewModel = BeneficiariesViewModel(
+      
+    let viewModel = makeBeneficiariesViewModel(
       beneficiaries: BeneficiariesLoader.load(),
-      dataSource: dataSource, beneficiarySelected: beneficiarySelected)
+      collectionView: viewController.collectionView,
+      beneficiarySelected: beneficiarySelected)
+      
     viewController.viewModel = viewModel
+      
     return viewController
   }
   
-  static func makeBeneficiariesViewControllerDataSource(collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary> {
+  private static func makeBeneficiariesViewModel(
+    beneficiaries: [Beneficiary],
+    collectionView: UICollectionView,
+    beneficiarySelected: @escaping (Beneficiary) -> Void) -> BeneficiariesViewModel {
+      
+    BeneficiariesViewModel(
+      beneficiaries: BeneficiariesLoader.load(),
+      dataSource: makeBeneficiariesViewControllerDataSource(collectionView: collectionView),
+      beneficiarySelected: beneficiarySelected)
+  }
+  
+  private static func makeBeneficiariesViewControllerDataSource(collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary> {
     
     let cellRegistration = UICollectionView.CellRegistration<BeneficiaryCell, Beneficiary> { cell, indexPath, beneficiary in
       cell.beneficiary = beneficiary
@@ -46,11 +60,34 @@ extension Factory {
 extension Factory {
   
   static func makeBeneficiaryDetailViewController(beneficiary: Beneficiary) -> BeneficiaryDetailViewController {
-    let viewModel = makeBeneficiaryDetailViewModel(beneficiary: beneficiary)
-    return BeneficiaryDetailViewController(viewModel: viewModel)
+    
+    let viewController = BeneficiaryDetailViewController()
+    let viewModel = makeBeneficiaryDetailViewModel(
+      beneficiary: beneficiary,
+      collectionView: viewController.collectionView)
+    viewController.viewModel = viewModel
+    return viewController
   }
   
-  static func makeBeneficiaryDetailViewModel(beneficiary: Beneficiary) -> BeneficiaryDetailViewModel {
-    BeneficiaryDetailViewModel(beneficiary: beneficiary)
+  static func makeBeneficiaryDetailViewModel(beneficiary: Beneficiary, collectionView: UICollectionView) -> BeneficiaryDetailViewModel {
+    BeneficiaryDetailViewModel(
+      beneficiary: beneficiary,
+      dataSource: makeBeneficiaryDetailViewControllerDataSource(collectionView: collectionView))
+  }
+  
+  private static func makeBeneficiaryDetailViewControllerDataSource(collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem> {
+    
+    let cellRegistration = UICollectionView.CellRegistration<BeneficiaryDetailInfoItemCell, BeneficiaryDetailInfoItem> { cell, indexPath, infoItem in
+      cell.item = infoItem
+    }
+    
+    return UICollectionViewDiffableDataSource<BeneficiaryDetailViewController.Section, BeneficiaryDetailInfoItem>(
+      collectionView: collectionView,
+      cellProvider: { collectionView, indexPath, infoItem in
+        collectionView.dequeueConfiguredReusableCell(
+          using: cellRegistration,
+          for: indexPath,
+          item: infoItem)
+      })
   }
 }
