@@ -41,9 +41,13 @@ class BeneficiaryDetailViewController: UIViewController {
     
     ssnContentLabel.text = viewModel.beneficiary.socialSecurityNumber
     
-    let formatter = DateFormatter()
-    formatter.dateFormat = "MM/dd/yyyy"
-    dateOfBirthContentLabel.text = formatter.string(from: viewModel.beneficiary.dateOfBirth)
+    if let dateOfBirth = viewModel.beneficiary.dateOfBirth {
+      let formatter = DateFormatter()
+      formatter.dateFormat = "MM/dd/yyyy"
+      dateOfBirthContentLabel.text = formatter.string(from: dateOfBirth)
+    } else {
+      dateOfBirthContentLabel.text = "NA"
+    }
     
     phoneNumberContentLabel.text = viewModel.beneficiary.phoneNumber
     

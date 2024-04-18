@@ -14,7 +14,7 @@ struct Beneficiary: Decodable {
   let designation: Designation
   let beneficiaryType: BeneficiaryType
   let socialSecurityNumber: String
-  let dateOfBirth: Date
+  let dateOfBirth: Date?
   let middleName: String
   let phoneNumber: String
   let beneficiaryAddress: Address
@@ -42,8 +42,12 @@ struct Beneficiary: Decodable {
     designation = try container.decode(Designation.self, forKey: .designation)
     beneficiaryType = try container.decode(BeneficiaryType.self, forKey: .beneficiaryType)
     socialSecurityNumber = try container.decode(String.self, forKey: .socialSecurityNumber)
+    
     let dateOfBirthString = try container.decode(String.self, forKey: .dateOfBirth)
-    dateOfBirth = Date(timeIntervalSince1970: TimeInterval(dateOfBirthString) ?? 0)
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MMddyyyy"
+    dateOfBirth = formatter.date(from: dateOfBirthString)
+    
     middleName = try container.decode(String.self, forKey: .middleName)
     phoneNumber = try container.decode(String.self, forKey: .phoneNumber)
     beneficiaryAddress = try container.decode(Address.self, forKey: .beneficiaryAddress)
