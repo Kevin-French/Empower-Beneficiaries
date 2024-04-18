@@ -2,7 +2,7 @@
 
 Here is my code for the take-home project.  I am happy with my solution but would add more tests if I had more time.
 
-I used MVVM, the Factory pattern and DI to try to keep the project well-structured and to have better separation of concerns.
+I used MVVM, the Factory pattern and DI to try to keep the project well-structured and to have better separation of concerns. Navigation is handled in the `Flow` class.
 
 I tried to keep the UI simple while sticking to iOS conventions.
 
