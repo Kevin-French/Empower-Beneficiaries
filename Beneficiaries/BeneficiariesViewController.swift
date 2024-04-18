@@ -10,9 +10,10 @@ import UIKit
 class BeneficiariesViewController: UIViewController {
   
   lazy var collectionView = makeCollectionView()
-  
   lazy var noBeneficiariesView = makeNoBeneficiariesView()
-
+  
+  var viewModel: BeneficiariesViewModel?
+  
   override func viewDidLoad() {
     
     super.viewDidLoad()
@@ -50,17 +51,21 @@ class BeneficiariesViewController: UIViewController {
   
   private func setUpLayout() {
     
-//    view.addSubview(collectionView)
+    view.addSubview(collectionView)
     view.addSubview(noBeneficiariesView)
     
-//    collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-//    collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-//    collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-//    collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+    collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+    collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+    collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
     
     noBeneficiariesView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     noBeneficiariesView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
     noBeneficiariesView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     noBeneficiariesView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
   }
+}
+
+extension BeneficiariesViewController {
+  enum Section: Hashable { case main }
 }
