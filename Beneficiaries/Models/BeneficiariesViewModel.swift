@@ -7,8 +7,11 @@
 
 import Foundation
 import UIKit
+import OSLog
 
 class BeneficiariesViewModel {
+  
+  private let logger = Logger(subsystem: "Beneficiaries", category: "BeneficiariesViewModel")
   
   let beneficiarySelected: (Beneficiary) -> Void
   
@@ -36,7 +39,8 @@ class BeneficiariesViewModel {
   
   func beneficiarySelected(indexPath: IndexPath) {
     guard let beneficiary = dataSource.itemIdentifier(for: indexPath) else {
-      print("Beneficiary not found for IndexPath:", indexPath)
+      logger.error("No Beneficiary found for indexPath")
+      print("\t", indexPath)
       return
     }
     beneficiarySelected(beneficiary)

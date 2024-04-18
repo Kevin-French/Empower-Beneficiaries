@@ -8,7 +8,6 @@
 import Foundation
 
 enum BeneficiariesLoader {
-  
   /**
    Loads beneficiaries from provided json file
    - returns:
