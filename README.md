@@ -1,3 +1,16 @@
+# Beneficiaries
+
+Here is my code for the take-home project.
+
+### HOW TO RUN
+- The app and tests can both be ran using standard methods.
+
+### AREAS FOR IMPROVEMENT
+- I would have liked to have used the standard `UICollectionViewController` class for both view controllers as they are very similar but I ran into an issue with the data for the first view controller not loading when using a diffable data source.  I ran out of time so I discarded those changes and went back to the working solution I already had.
+- I prefer to use initializer injection whenever possible so I would have liked to do so with the View Controllers but I couldn't find a way to do that because the view models used the collection views in their initializers.
+
+### SPECS
+
 Duration:
 
 Candidate is expected to submit complete the exercise in approximately 24 hours. 
