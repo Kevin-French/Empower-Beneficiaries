@@ -69,7 +69,7 @@ extension Factory {
     return viewController
   }
   
-  static func makeBeneficiaryDetailViewModel(beneficiary: Beneficiary, collectionView: UICollectionView) -> BeneficiaryDetailViewModel {
+  private static func makeBeneficiaryDetailViewModel(beneficiary: Beneficiary, collectionView: UICollectionView) -> BeneficiaryDetailViewModel {
     BeneficiaryDetailViewModel(
       beneficiary: beneficiary,
       dataSource: makeBeneficiaryDetailViewControllerDataSource(collectionView: collectionView))
