@@ -16,6 +16,9 @@ struct Address: Decodable, Equatable {
   let stateCode: State
   let country: Country
   
+  /**
+   The formatted address string as it would appear on a package.  A nil second line value is omitted
+   */
   var multilineString: String {
     let lineComponents = [
       firstLineMailing,
