@@ -20,9 +20,7 @@ class BeneficiariesViewController: UIViewController {
     view.backgroundColor = .systemBackground
     
     title = "Beneficiaries"
-    
-    navigationController?.navigationBar.prefersLargeTitles = true
-    
+  
     setUpLayout()
   }
   

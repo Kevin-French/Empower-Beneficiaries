@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
-    self.flow = Flow(navigationController: UINavigationController())
+    let navigationController = UINavigationController()
+    navigationController.navigationBar.prefersLargeTitles = true
+    
+    self.flow = Flow(navigationController: navigationController)
     
     let beneficiariesViewController = Factory.makeBeneficiariesViewController(
       beneficiarySelected: flow!.beneficiarySelected(_:))
