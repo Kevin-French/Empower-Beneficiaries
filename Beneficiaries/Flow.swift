@@ -16,10 +16,20 @@ class Flow {
     self.navigationController = navigationController
   }
   
+  /**
+  Starts the UI of the app
+  - parameters:
+   - viewController: The first ViewController shown in the app
+   */
   func begin(byPresenting viewController: UIViewController) {
     navigationController.pushViewController(viewController, animated: false)
   }
   
+  /**
+  Routes to BeneficiaryDetailViewController
+   - parameters:
+   - beneficiary: The selected Beneficiary
+   */
   func beneficiarySelected(_ beneficiary: Beneficiary) {
     let detailViewController = Factory.makeBeneficiaryDetailViewController(beneficiary: beneficiary)
     navigationController.pushViewController(detailViewController, animated: true)
