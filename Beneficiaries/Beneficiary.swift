@@ -55,8 +55,17 @@ extension Beneficiary: Hashable {
 }
 
 extension Beneficiary {
+  
   enum Designation: String, Decodable {
+    
     case primary = "P", contingent = "C"
+  
+    var title: String {
+      switch self {
+      case .primary: "Primary"
+      case .contingent: "Contingent"
+      }
+    }
   }
 }
 

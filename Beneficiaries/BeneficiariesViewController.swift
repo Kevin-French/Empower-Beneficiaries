@@ -17,9 +17,11 @@ class BeneficiariesViewController: UIViewController {
     
     super.viewDidLoad()
     
-    view.backgroundColor = .red
+    view.backgroundColor = .systemBackground
     
     title = "Beneficiaries"
+    
+    navigationController?.navigationBar.prefersLargeTitles = true
     
     setUpLayout()
   }
@@ -29,24 +31,34 @@ class BeneficiariesViewController: UIViewController {
       frame: .zero,
       collectionViewLayout: makeLayout())
     collectionView.translatesAutoresizingMaskIntoConstraints = false
-    collectionView.backgroundColor = .green
     return collectionView
   }
   
   private func makeLayout() -> UICollectionViewCompositionalLayout {
-    UICollectionViewCompositionalLayout.list(
-      using: UICollectionLayoutListConfiguration(
-        appearance: .grouped))
+  
+    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+    let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(55))
+    let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
+    let section = NSCollectionLayoutSection(group: group)
+    return UICollectionViewCompositionalLayout(section: section)
   }
   
   private func setUpLayout() {
     
     view.addSubview(collectionView)
     
-    collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-    collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-    collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-    collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+    let inset: CGFloat = 20.0
+    collectionView.topAnchor.constraint(
+      equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+    collectionView.trailingAnchor.constraint(
+      equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+      constant: -inset).isActive = true
+    collectionView.bottomAnchor.constraint(
+      equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    collectionView.leadingAnchor.constraint(
+      equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+      constant: inset).isActive = true
   }
 }
 

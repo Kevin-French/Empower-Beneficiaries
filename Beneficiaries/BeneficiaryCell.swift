@@ -12,15 +12,26 @@ class BeneficiaryCell: UICollectionViewCell {
   var beneficiary: Beneficiary? {
     didSet {
       if let beneficiary {
-        label.text = "\(beneficiary.firstName) \(beneficiary.lastName)"
+        nameLabel.text = "\(beneficiary.firstName) \(beneficiary.lastName)"
+        detailLabel.text = "\(beneficiary.designation.title) • \(beneficiary.beneficiaryType.rawValue)"
       } else {
-        label.text = ""
+        nameLabel.text = ""
+        detailLabel.text = ""
       }
     }
   }
   
-  private let label: UILabel = {
+  private let nameLabel: UILabel = {
     let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.font = .systemFont(ofSize: 20, weight: .semibold)
+    return label
+  }()
+  
+  private let detailLabel: UILabel = {
+    let label = UILabel()
+    label.font = .systemFont(ofSize: 16, weight: .regular)
+    label.textColor = .secondaryLabel
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
@@ -36,11 +47,15 @@ class BeneficiaryCell: UICollectionViewCell {
   
   private func setUpLayout() {
     
-    contentView.addSubview(label)
+    contentView.addSubview(nameLabel)
+    contentView.addSubview(detailLabel)
     
-    label.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-    label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-    label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-    label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+    nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+    nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+    nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+    
+    detailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
+    detailLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+    detailLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
   }
 }
