@@ -20,6 +20,7 @@
 		0A404A352BD087BC00B973AA /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A404A342BD087BC00B973AA /* Country.swift */; };
 		0A404A392BD0882000B973AA /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A404A382BD0882000B973AA /* State.swift */; };
 		0A4CA3132BD147A5006AE902 /* BeneficiariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3122BD147A5006AE902 /* BeneficiariesViewController.swift */; };
+		0A4CA3152BD14928006AE902 /* BeneficiariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3142BD14928006AE902 /* BeneficiariesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0A404A342BD087BC00B973AA /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		0A404A382BD0882000B973AA /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		0A4CA3122BD147A5006AE902 /* BeneficiariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiariesViewController.swift; sourceTree = "<group>"; };
+		0A4CA3142BD14928006AE902 /* BeneficiariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiariesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				0A404A0F2BD083C600B973AA /* BeneficiariesTests.swift */,
 				0A404A2A2BD0865D00B973AA /* BeneficiariesLoaderTests.swift */,
+				0A4CA3142BD14928006AE902 /* BeneficiariesViewController.swift */,
 			);
 			path = BeneficiariesTests;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				0A404A2B2BD0865D00B973AA /* BeneficiariesLoaderTests.swift in Sources */,
 				0A404A102BD083C600B973AA /* BeneficiariesTests.swift in Sources */,
+				0A4CA3152BD14928006AE902 /* BeneficiariesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
