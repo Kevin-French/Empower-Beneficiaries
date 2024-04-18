@@ -31,6 +31,7 @@ class BeneficiariesViewController: UIViewController {
       frame: .zero,
       collectionViewLayout: makeLayout())
     collectionView.translatesAutoresizingMaskIntoConstraints = false
+    collectionView.delegate = self
     return collectionView
   }
   
@@ -64,4 +65,11 @@ class BeneficiariesViewController: UIViewController {
 
 extension BeneficiariesViewController {
   enum Section: Hashable { case main }
+}
+
+extension BeneficiariesViewController: UICollectionViewDelegate {
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    viewModel.beneficiarySelected(indexPath: indexPath)
+  }
 }

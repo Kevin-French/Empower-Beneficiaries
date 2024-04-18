@@ -8,18 +8,18 @@
 import Foundation
 import UIKit
 
-enum Factory {
-  
-  static func makeRootNavigationController() -> UINavigationController {
-    UINavigationController(rootViewController: makeBeneficiariesViewController())
-  }
-  
-  private static func makeBeneficiariesViewController() -> BeneficiariesViewController {
+enum Factory { }
+
+// MARK: BeneficiariesViewController
+extension Factory {
+  static func makeBeneficiariesViewController(
+    beneficiarySelected: @escaping (Beneficiary) -> Void) -> BeneficiariesViewController {
+      
     let viewController = BeneficiariesViewController()
     let dataSource = makeBeneficiariesViewControllerDataSource(collectionView: viewController.collectionView)
     let viewModel = BeneficiariesViewModel(
       beneficiaries: BeneficiariesLoader.load(),
-      dataSource: dataSource)
+      dataSource: dataSource, beneficiarySelected: beneficiarySelected)
     viewController.viewModel = viewModel
     return viewController
   }
@@ -42,5 +42,13 @@ enum Factory {
     UICollectionView.CellRegistration<BeneficiaryCell, Beneficiary> { cell, indexPath, beneficiary in
       cell.beneficiary = beneficiary
     }
+  }
+}
+
+// MARK: BeneficiaryDetailViewController
+extension Factory {
+  
+  static func makeBeneficiaryDetailViewController(beneficiary: Beneficiary) -> BeneficiaryDetailViewController {
+    BeneficiaryDetailViewController()
   }
 }

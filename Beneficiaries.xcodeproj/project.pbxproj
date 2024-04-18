@@ -24,6 +24,8 @@
 		0A4CA3192BD15093006AE902 /* BeneficiariesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3182BD15093006AE902 /* BeneficiariesViewModel.swift */; };
 		0A4CA31B2BD1533B006AE902 /* BeneficiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA31A2BD1533B006AE902 /* BeneficiaryCell.swift */; };
 		0A4CA31D2BD156A9006AE902 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA31C2BD156A9006AE902 /* Factory.swift */; };
+		0A4CA3232BD16767006AE902 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3222BD16767006AE902 /* Flow.swift */; };
+		0A4CA3252BD1689F006AE902 /* BeneficiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		0A4CA3182BD15093006AE902 /* BeneficiariesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiariesViewModel.swift; sourceTree = "<group>"; };
 		0A4CA31A2BD1533B006AE902 /* BeneficiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryCell.swift; sourceTree = "<group>"; };
 		0A4CA31C2BD156A9006AE902 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		0A4CA3222BD16767006AE902 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				0A4CA3182BD15093006AE902 /* BeneficiariesViewModel.swift */,
 				0A4CA31A2BD1533B006AE902 /* BeneficiaryCell.swift */,
 				0A4CA31C2BD156A9006AE902 /* Factory.swift */,
+				0A4CA3222BD16767006AE902 /* Flow.swift */,
+				0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */,
 			);
 			path = Beneficiaries;
 			sourceTree = "<group>";
@@ -233,10 +239,12 @@
 				0A4CA31D2BD156A9006AE902 /* Factory.swift in Sources */,
 				0A404A352BD087BC00B973AA /* Country.swift in Sources */,
 				0A404A332BD087A800B973AA /* Address.swift in Sources */,
+				0A4CA3252BD1689F006AE902 /* BeneficiaryDetailViewController.swift in Sources */,
 				0A4CA3132BD147A5006AE902 /* BeneficiariesViewController.swift in Sources */,
 				0A404A2F2BD0870F00B973AA /* BeneficiariesLoader.swift in Sources */,
 				0A404A312BD0873600B973AA /* Beneficiary.swift in Sources */,
 				0A4049F92BD083C400B973AA /* AppDelegate.swift in Sources */,
+				0A4CA3232BD16767006AE902 /* Flow.swift in Sources */,
 				0A4049FB2BD083C400B973AA /* SceneDelegate.swift in Sources */,
 				0A404A392BD0882000B973AA /* State.swift in Sources */,
 			);

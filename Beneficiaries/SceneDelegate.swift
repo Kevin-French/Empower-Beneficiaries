@@ -10,13 +10,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
+  var flow: Flow?
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
+    self.flow = Flow(navigationController: UINavigationController())
+    
+    let beneficiariesViewController = Factory.makeBeneficiariesViewController(
+      beneficiarySelected: flow!.beneficiarySelected(_:))
+    
+    flow?.begin(viewController: beneficiariesViewController)
+    
     self.window = UIWindow(windowScene: windowScene)
-    self.window?.rootViewController = Factory.makeRootNavigationController()
+    self.window?.rootViewController = flow?.navigationController
     self.window?.makeKeyAndVisible()
   }
 
