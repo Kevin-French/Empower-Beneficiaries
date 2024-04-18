@@ -21,20 +21,8 @@ class BeneficiaryCell: UICollectionViewCell {
     }
   }
   
-  private let nameLabel: UILabel = {
-    let label = UILabel()
-    label.translatesAutoresizingMaskIntoConstraints = false
-    label.font = .systemFont(ofSize: 20, weight: .semibold)
-    return label
-  }()
-  
-  private let detailLabel: UILabel = {
-    let label = UILabel()
-    label.font = .systemFont(ofSize: 16, weight: .regular)
-    label.textColor = .secondaryLabel
-    label.translatesAutoresizingMaskIntoConstraints = false
-    return label
-  }()
+  private lazy var nameLabel = makeNameLabel()
+  private lazy var detailLabel = makeDetailLabel()
   
   override init(frame: CGRect) {
     super.init(frame: .zero)
@@ -57,5 +45,20 @@ class BeneficiaryCell: UICollectionViewCell {
     detailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
     detailLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
     detailLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+  }
+  
+  private func makeNameLabel() -> UILabel {
+    let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.font = .systemFont(ofSize: 20, weight: .semibold)
+    return label
+  }
+  
+  private func makeDetailLabel() -> UILabel {
+    let label = UILabel()
+    label.font = .systemFont(ofSize: 16, weight: .regular)
+    label.textColor = .secondaryLabel
+    label.translatesAutoresizingMaskIntoConstraints = false
+    return label
   }
 }
