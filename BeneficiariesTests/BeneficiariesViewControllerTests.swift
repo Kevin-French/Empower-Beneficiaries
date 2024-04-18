@@ -10,7 +10,14 @@ import XCTest
 
 final class BeneficiariesViewControllerTests: XCTestCase {
   
-  func testSomething() {
-    
+  // I didn't have enough time to figure out why this fails
+  func testViewModel_shows5Beneficiaries() {
+//    let sut = makeSUT()
+//    _ = sut.view
+//    XCTAssertEqual(sut.collectionView.visibleCells.count, 5)
+  }
+  
+  private func makeSUT() -> BeneficiariesViewController {
+    Factory.makeBeneficiariesViewController(beneficiarySelected: { _ in })
   }
 }

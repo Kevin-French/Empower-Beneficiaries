@@ -31,6 +31,7 @@
 		0A734D9B2BD1D13700D5661B /* StateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A734D9A2BD1D13700D5661B /* StateTests.swift */; };
 		0A734D9D2BD1D1AD00D5661B /* CountryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A734D9C2BD1D1AD00D5661B /* CountryTest.swift */; };
 		0A734D9F2BD1D20600D5661B /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A734D9E2BD1D20600D5661B /* AddressTests.swift */; };
+		0A734DA12BD1D7A300D5661B /* BeneficiaryDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A734DA02BD1D7A200D5661B /* BeneficiaryDetailViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0A734D9A2BD1D13700D5661B /* StateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTests.swift; sourceTree = "<group>"; };
 		0A734D9C2BD1D1AD00D5661B /* CountryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTest.swift; sourceTree = "<group>"; };
 		0A734D9E2BD1D20600D5661B /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		0A734DA02BD1D7A200D5661B /* BeneficiaryDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryDetailViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				0A734D9A2BD1D13700D5661B /* StateTests.swift */,
 				0A734D9C2BD1D1AD00D5661B /* CountryTest.swift */,
 				0A734D9E2BD1D20600D5661B /* AddressTests.swift */,
+				0A734DA02BD1D7A200D5661B /* BeneficiaryDetailViewControllerTests.swift */,
 			);
 			path = BeneficiariesTests;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				0A404A2B2BD0865D00B973AA /* BeneficiariesLoaderTests.swift in Sources */,
 				0A404A102BD083C600B973AA /* BeneficiaryTests.swift in Sources */,
+				0A734DA12BD1D7A300D5661B /* BeneficiaryDetailViewControllerTests.swift in Sources */,
 				0A734D9F2BD1D20600D5661B /* AddressTests.swift in Sources */,
 				0A4CA3152BD14928006AE902 /* BeneficiariesViewControllerTests.swift in Sources */,
 				0A734D9D2BD1D1AD00D5661B /* CountryTest.swift in Sources */,
