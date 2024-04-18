@@ -12,7 +12,7 @@ class BeneficiaryCell: UICollectionViewCell {
   var beneficiary: Beneficiary? {
     didSet {
       if let beneficiary {
-        nameLabel.text = "\(beneficiary.firstName) \(beneficiary.lastName)"
+        nameLabel.text = beneficiary.fullName
         detailLabel.text = "\(beneficiary.designation.title) • \(beneficiary.beneficiaryType.rawValue)"
       } else {
         nameLabel.text = ""

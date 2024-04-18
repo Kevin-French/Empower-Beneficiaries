@@ -12,6 +12,7 @@ enum Factory { }
 
 // MARK: BeneficiariesViewController
 extension Factory {
+  
   static func makeBeneficiariesViewController(
     beneficiarySelected: @escaping (Beneficiary) -> Void) -> BeneficiariesViewController {
       
@@ -26,7 +27,9 @@ extension Factory {
   
   static func makeBeneficiariesViewControllerDataSource(collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary> {
     
-    let cellRegistration = makeBeneficiariesViewControllerCellRegistration()
+    let cellRegistration = UICollectionView.CellRegistration<BeneficiaryCell, Beneficiary> { cell, indexPath, beneficiary in
+      cell.beneficiary = beneficiary
+    }
     
     return UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>(
       collectionView: collectionView,
@@ -37,18 +40,17 @@ extension Factory {
           item: beneficiary)
       })
   }
-  
-  private static func makeBeneficiariesViewControllerCellRegistration() -> UICollectionView.CellRegistration<BeneficiaryCell, Beneficiary> {
-    UICollectionView.CellRegistration<BeneficiaryCell, Beneficiary> { cell, indexPath, beneficiary in
-      cell.beneficiary = beneficiary
-    }
-  }
 }
 
 // MARK: BeneficiaryDetailViewController
 extension Factory {
   
   static func makeBeneficiaryDetailViewController(beneficiary: Beneficiary) -> BeneficiaryDetailViewController {
-    BeneficiaryDetailViewController()
+    let viewModel = makeBeneficiaryDetailViewModel(beneficiary: beneficiary)
+    return BeneficiaryDetailViewController(viewModel: viewModel)
+  }
+  
+  static func makeBeneficiaryDetailViewModel(beneficiary: Beneficiary) -> BeneficiaryDetailViewModel {
+    BeneficiaryDetailViewModel(beneficiary: beneficiary)
   }
 }

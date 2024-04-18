@@ -26,6 +26,7 @@
 		0A4CA31D2BD156A9006AE902 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA31C2BD156A9006AE902 /* Factory.swift */; };
 		0A4CA3232BD16767006AE902 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3222BD16767006AE902 /* Flow.swift */; };
 		0A4CA3252BD1689F006AE902 /* BeneficiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */; };
+		0A4CA32B2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CA32A2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		0A4CA31C2BD156A9006AE902 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		0A4CA3222BD16767006AE902 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryDetailViewController.swift; sourceTree = "<group>"; };
+		0A4CA32A2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				0A4CA31C2BD156A9006AE902 /* Factory.swift */,
 				0A4CA3222BD16767006AE902 /* Flow.swift */,
 				0A4CA3242BD1689F006AE902 /* BeneficiaryDetailViewController.swift */,
+				0A4CA32A2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift */,
 			);
 			path = Beneficiaries;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				0A404A2F2BD0870F00B973AA /* BeneficiariesLoader.swift in Sources */,
 				0A404A312BD0873600B973AA /* Beneficiary.swift in Sources */,
 				0A4049F92BD083C400B973AA /* AppDelegate.swift in Sources */,
+				0A4CA32B2BD1780F006AE902 /* BeneficiaryDetailViewModel.swift in Sources */,
 				0A4CA3232BD16767006AE902 /* Flow.swift in Sources */,
 				0A4049FB2BD083C400B973AA /* SceneDelegate.swift in Sources */,
 				0A404A392BD0882000B973AA /* State.swift in Sources */,

@@ -16,6 +16,15 @@ struct Address: Decodable, Equatable {
   let stateCode: State
   let country: Country
   
+  var multilineString: String {
+    let lineComponents = [
+      firstLineMailing,
+      secondLineMailing,
+      "\(city), \(stateCode.rawValue) \(zipCode)",
+      country.rawValue]
+    return lineComponents.compactMap { $0 }.joined(separator: "\n")
+  }
+  
   enum CodingKeys: String, CodingKey {
     case firstLineMailing, secondLineMailing = "scndLineMailing", city, zipCode, stateCode, country
   }
