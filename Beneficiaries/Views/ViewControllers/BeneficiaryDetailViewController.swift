@@ -40,7 +40,9 @@ class BeneficiaryDetailViewController: UIViewController {
         widthDimension: .fractionalWidth(1.0),
         heightDimension: .fractionalHeight(1.0))
       let item = NSCollectionLayoutItem(layoutSize: itemSize)
+      
       let estimatedHeight: CGFloat = (Section(rawValue: sectionIndex)! == .address ? 100 : 50)
+      
       let groupSize = NSCollectionLayoutSize(
         widthDimension: .fractionalWidth(1.0),
         heightDimension: .estimated(estimatedHeight))
