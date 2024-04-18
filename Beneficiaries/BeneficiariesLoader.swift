@@ -9,6 +9,11 @@ import Foundation
 
 enum BeneficiariesLoader {
   
+  /**
+   Loads beneficiaries from provided json file
+   - returns:
+    The beneficiaries or an empty array if something went wrong
+   */
   static func load() -> [Beneficiary] {
     
     guard let url = Bundle.main.url(
