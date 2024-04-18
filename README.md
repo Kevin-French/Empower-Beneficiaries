@@ -4,6 +4,8 @@ Here is my code for the take-home project.  I am happy with my solution but woul
 
 I used MVVM, the Factory pattern and DI to try to keep the project well-structured and to have better separation of concerns.
 
+I tried to keep the UI simple while sticking to iOS conventions.
+
 ### HOW TO RUN
 - The app and tests can both be ran using standard methods.
 
