@@ -71,10 +71,10 @@ class BeneficiaryDetailViewController: UIViewController {
       constant: 10.0).isActive = true
     ssnHeaderLabel.trailingAnchor.constraint(
       equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-      constant: -10.0).isActive = true
+      constant: -20.0).isActive = true
     ssnHeaderLabel.leadingAnchor.constraint(
       equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-      constant: 10.0).isActive = true
+      constant: 20.0).isActive = true
     
     ssnContentLabel.topAnchor.constraint(
       equalTo: ssnHeaderLabel.bottomAnchor,
@@ -89,11 +89,9 @@ class BeneficiaryDetailViewController: UIViewController {
       equalTo: ssnContentLabel.bottomAnchor,
       constant: groupSpacing).isActive = true
     dateOfBirthHeaderLabel.trailingAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-      constant: -10.0).isActive = true
+      equalTo: ssnHeaderLabel.trailingAnchor).isActive = true
     dateOfBirthHeaderLabel.leadingAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-      constant: 10.0).isActive = true
+      equalTo: ssnHeaderLabel.leadingAnchor).isActive = true
     
     dateOfBirthContentLabel.topAnchor.constraint(
       equalTo: dateOfBirthHeaderLabel.bottomAnchor,
@@ -108,11 +106,9 @@ class BeneficiaryDetailViewController: UIViewController {
       equalTo: dateOfBirthContentLabel.bottomAnchor,
       constant: groupSpacing).isActive = true
     phoneNumberHeaderLabel.trailingAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-      constant: -10.0).isActive = true
+      equalTo: ssnHeaderLabel.trailingAnchor).isActive = true
     phoneNumberHeaderLabel.leadingAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-      constant: 10.0).isActive = true
+      equalTo: ssnHeaderLabel.leadingAnchor).isActive = true
     
     phoneNumberContentLabel.topAnchor.constraint(
       equalTo: phoneNumberHeaderLabel.bottomAnchor,
@@ -127,11 +123,9 @@ class BeneficiaryDetailViewController: UIViewController {
       equalTo: phoneNumberContentLabel.bottomAnchor,
       constant: groupSpacing).isActive = true
     addressHeaderLabel.trailingAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-      constant: -10.0).isActive = true
+      equalTo: ssnHeaderLabel.trailingAnchor).isActive = true
     addressHeaderLabel.leadingAnchor.constraint(
-      equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-      constant: 10.0).isActive = true
+      equalTo: ssnHeaderLabel.leadingAnchor).isActive = true
     
     addressContentLabel.topAnchor.constraint(
       equalTo: addressHeaderLabel.bottomAnchor,
