@@ -11,8 +11,7 @@ import UIKit
 class BeneficiariesViewModel {
   
   private let beneficiaries: [Beneficiary]
-  
-  let dataSource: UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>
+  private let dataSource: UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>
   
   init(
     beneficiaries: [Beneficiary],
