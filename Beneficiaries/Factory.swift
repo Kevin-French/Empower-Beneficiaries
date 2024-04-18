@@ -39,13 +39,13 @@ extension Factory {
       beneficiarySelected: beneficiarySelected)
   }
   
-  private static func makeBeneficiariesViewControllerDataSource(collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary> {
+  private static func makeBeneficiariesViewControllerDataSource(collectionView: UICollectionView) -> BeneficiariesDataSource {
     
     let cellRegistration = UICollectionView.CellRegistration<BeneficiaryCell, Beneficiary> { cell, indexPath, beneficiary in
       cell.beneficiary = beneficiary
     }
     
-    return UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>(
+    return BeneficiariesDataSource(
       collectionView: collectionView,
       cellProvider: { collectionView, indexPath, beneficiary in
         collectionView.dequeueConfiguredReusableCell(

@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import OSLog
 
+typealias BeneficiariesDataSource = UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>
+
 class BeneficiariesViewModel {
   
   private let logger = Logger(subsystem: "Beneficiaries", category: "BeneficiariesViewModel")
@@ -16,11 +18,11 @@ class BeneficiariesViewModel {
   let beneficiarySelected: (Beneficiary) -> Void
   
   private let beneficiaries: [Beneficiary]
-  private let dataSource: UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>
+  private let dataSource: BeneficiariesDataSource
   
   init(
     beneficiaries: [Beneficiary],
-    dataSource: UICollectionViewDiffableDataSource<BeneficiariesViewController.Section, Beneficiary>,
+    dataSource: BeneficiariesDataSource,
     beneficiarySelected: @escaping (Beneficiary) -> Void) {
     
     self.beneficiarySelected = beneficiarySelected
