@@ -68,7 +68,7 @@ class BeneficiaryDetailViewController: UIViewController {
     
     ssnHeaderLabel.topAnchor.constraint(
       equalTo: view.safeAreaLayoutGuide.topAnchor,
-      constant: 10.0).isActive = true
+      constant: 6.0).isActive = true
     ssnHeaderLabel.trailingAnchor.constraint(
       equalTo: view.safeAreaLayoutGuide.trailingAnchor,
       constant: -20.0).isActive = true
