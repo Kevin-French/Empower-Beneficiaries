@@ -52,6 +52,18 @@ struct Beneficiary: Decodable {
     phoneNumber = try container.decode(String.self, forKey: .phoneNumber)
     beneficiaryAddress = try container.decode(Address.self, forKey: .beneficiaryAddress)
   }
+  
+  init(lastName: String, firstName: String, designation: Beneficiary.Designation, beneficiaryType: Beneficiary.BeneficiaryType, socialSecurityNumber: String, dateOfBirth: Date? = nil, middleName: String, phoneNumber: String, beneficiaryAddress: Address) {
+    self.lastName = lastName
+    self.firstName = firstName
+    self.designation = designation
+    self.beneficiaryType = beneficiaryType
+    self.socialSecurityNumber = socialSecurityNumber
+    self.dateOfBirth = dateOfBirth
+    self.middleName = middleName
+    self.phoneNumber = phoneNumber
+    self.beneficiaryAddress = beneficiaryAddress
+  }
 }
 
 extension Beneficiary: Hashable {

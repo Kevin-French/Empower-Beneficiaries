@@ -9,7 +9,8 @@ import XCTest
 @testable import Beneficiaries
 
 final class BeneficiaryTests: XCTestCase {
-
+  
+  func testFullNameString() {
     
-
+  }
 }
